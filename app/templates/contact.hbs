@@ -1,14 +1,23 @@
 
+
 <div class="contactCard">
 <li id="{{ _id }}" class="contactItem">
 
-  <div id="fullName" class="fullName"> {{ lastName }}, {{ firstName }} <a id="theFullName" href="#" class="tag">name</a><span id="remove" class="remove">X</span></div>
+  <div id="fullName" class="fullName"> {{ lastName }}, {{ firstName }} <span id="remove" class="remove">X</span><div></div></div>
 
-  <div class="email">{{ email }} <a id="emailTag" href="#" class="tag">email</a></div>
+  <div class="email">{{ email }} </div>
+  <div class="tagDiv"><a id="emailTag" href="#" class="tag">email</a></div>
 
-  <div class="phoneNumber">{{ phoneNumber }} <a href="#" id="phoneNumberTag" class="tag">number</a></div>
+  <div class="linkedin">{{ linkedin }} </div>
+  <div class="tagDiv"><a href="#" id="linkedinTag" class="tag">linkedin</a></div>
 
-  <div class="social">{{ twitter }} <a href="#" id="twitterTag" class="tag">twitter</a>  {{ linkedin }} <a href="#" id="linkedinTag" class="tag">linkedin</a></div>
+  <div class="social">
+  <div class="twitter">{{ twitter }} </div>
+  <div class="phoneNumber">{{ phoneNumber }} </div>
+  </div>
+  <div class="tagDiv">
+  <a href="#" id="twitterTag" class="tag">twitter</a>
+  </div>
 
   </li>
 </div>

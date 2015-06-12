@@ -1,3 +1,6 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+
 $fontStyle: 'News Cycle', sans-serif;
 $gray: #7F7D7B;
 
@@ -9,6 +12,7 @@ $gray: #7F7D7B;
 
 form {
   border: 1px solid green;
+  border-radius: 3px;
   width: 400px;
   padding: 25px;
 }
@@ -22,26 +26,90 @@ ul {
 .tag {
   color: $gray;
   font-size: 10px;
+  top: 5px;
+  text-decoration: none;
+
 }
 
-.remove {
-  color: white;
-  background-color: red;
-  border-radius: 3px;
-  padding: 0px 5px;
-  float: right;
-}
 
 .contactItem {
-  padding: 25px;
+  padding: 0;
 }
 
 .contactCard {
-
-  border: 1px solid black;
+  border: 1px solid $gray;
+  border-radius: 3px;
+  padding: 25px;
+  margin-bottom: 20px;
 }
 
 .fullName {
-  width: 200px;
-  margin-right: 0;
+  width: 100%;
+  font-size: 35px;
+  margin-bottom: 20px;
+
+    .remove {
+      color: white;
+      background-color: red;
+      border-radius: 3px;
+      padding: 0px 9px;
+      float: right;
+      font-size: 20px;
+      margin-top: 14px;
+    }
 }
+
+.social {
+    display: -webkit-inline-box;
+}
+
+.email {
+  border: 1px solid $gray;
+  border-radius: 3px;
+  padding-left: 20px;
+}
+
+.phoneNumber {
+  border: 1px solid $gray;
+  border-radius: 3px;
+  padding-left: 20px;
+  padding-right: 35px;
+  margin-left: 30px;
+}
+
+.twitter {
+  border: 1px solid $gray;
+  border-radius: 3px;
+  padding-left: 20px;
+  padding-right: 25px;
+}
+
+.linkedin {
+  border: 1px solid $gray;
+  border-radius: 3px;
+  padding-left: 20px;
+  padding-right: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

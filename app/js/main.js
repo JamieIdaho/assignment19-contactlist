@@ -3,6 +3,7 @@ var allContacts = new ContactCollection();
 
 //link the data from server to the page
 allContacts.fetch().done(function() {
+
   allContacts.each(function(model) {
     contactView(model.attributes);
 
