@@ -2,21 +2,21 @@ this["template"] = this["template"] || {};
 this["template"]["contact"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
-  return "\n<li id=\""
+  return "\n<div class=\"contactCard\">\n<li id=\""
     + alias3(((helper = (helper = helpers._id || (depth0 != null ? depth0._id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"_id","hash":{},"data":data}) : helper)))
-    + "\">\n  "
+    + "\" class=\"contactItem\">\n\n  <div id=\"fullName\" class=\"fullName\"> "
     + alias3(((helper = (helper = helpers.lastName || (depth0 != null ? depth0.lastName : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"lastName","hash":{},"data":data}) : helper)))
-    + "\n  "
+    + ", "
     + alias3(((helper = (helper = helpers.firstName || (depth0 != null ? depth0.firstName : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"firstName","hash":{},"data":data}) : helper)))
-    + "\n  "
+    + " <a id=\"theFullName\" href=\"#\" class=\"tag\">name</a><span id=\"remove\" class=\"remove\">X</span></div>\n\n  <div class=\"email\">"
     + alias3(((helper = (helper = helpers.email || (depth0 != null ? depth0.email : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"email","hash":{},"data":data}) : helper)))
-    + "\n  "
+    + " <a id=\"emailTag\" href=\"#\" class=\"tag\">email</a></div>\n\n  <div class=\"phoneNumber\">"
     + alias3(((helper = (helper = helpers.phoneNumber || (depth0 != null ? depth0.phoneNumber : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"phoneNumber","hash":{},"data":data}) : helper)))
-    + "\n  "
+    + " <a href=\"#\" id=\"phoneNumberTag\" class=\"tag\">number</a></div>\n\n  <div class=\"social\">"
     + alias3(((helper = (helper = helpers.twitter || (depth0 != null ? depth0.twitter : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"twitter","hash":{},"data":data}) : helper)))
-    + "\n  "
+    + " <a href=\"#\" id=\"twitterTag\" class=\"tag\">twitter</a>  "
     + alias3(((helper = (helper = helpers.linkedin || (depth0 != null ? depth0.linkedin : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"linkedin","hash":{},"data":data}) : helper)))
-    + "\n\n  </li>\n";
+    + " <a href=\"#\" id=\"linkedinTag\" class=\"tag\">linkedin</a></div>\n\n  </li>\n</div>\n";
 },"useData":true});
 this["template"] = this["template"] || {};
 this["template"]["example"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {

@@ -1,3 +1,35 @@
 .container {
-  padding: 300px;
-  margin: 0 auto; }
+  padding: 50px 200px;
+  margin: 0 auto;
+  font-family: "News Cycle", sans-serif; }
+
+form {
+  border: 1px solid green;
+  width: 400px;
+  padding: 25px; }
+
+ul {
+  list-style: none;
+  width: 400px;
+  padding-left: 0; }
+
+.tag {
+  color: #7F7D7B;
+  font-size: 10px; }
+
+.remove {
+  color: white;
+  background-color: red;
+  border-radius: 3px;
+  padding: 0px 5px;
+  float: right; }
+
+.contactItem {
+  padding: 25px; }
+
+.contactCard {
+  border: 1px solid black; }
+
+.fullName {
+  width: 200px;
+  margin-right: 0; }

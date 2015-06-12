@@ -5,6 +5,7 @@ var allContacts = new ContactCollection();
 allContacts.fetch().done(function() {
   allContacts.each(function(model) {
     contactView(model.attributes);
+
   });
 });
 
@@ -19,7 +20,6 @@ var addContact = function(e) {
   var twitter = $('#twitter').val();
   var linkedin = $('#linkedin').val();
 
-  console.log(lastName);
 
 // add input values to new instance of Contact model
   var c = new Contact ({
@@ -42,6 +42,19 @@ var addContact = function(e) {
   this.reset();
 };
 
+var removeContact = function(e) {
+  e.preventDefault();
+  var contact2Delete = $(this).parent().parent(),
+      id2Delete = contact2Delete.attr('id');
+
+
+      allContacts.get(id2Delete).destroy().success(function() {
+        contact2Delete.fadeOut();
+
+      });
+    };
+
+
 //displays contact info on the page
 var contactView = function(x) {
   var contactHTML = template.contact(x);
@@ -50,6 +63,9 @@ var contactView = function(x) {
 
 //submit handler
 $('#contactForm').on('submit', addContact);
+
+//delete handler
+$('#contacts').on('click', '#fullName #remove', removeContact);
 
 
 
