@@ -17,7 +17,7 @@ var addContact = function(e) {
   var lastName = $('#lastName').val();
   var firstName = $('#firstName').val();
   var email = $('#email').val();
-  var phoneNumber = $('#phoneNumber').val();
+  var phoneNumber = $('#phoneNumber').mask("(999) 999-9999").val();
   var twitter = $('#twitter').val();
   var linkedin = $('#linkedin').val();
 
