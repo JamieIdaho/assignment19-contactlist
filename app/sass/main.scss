@@ -35,11 +35,31 @@ button {
   outline: none;
 }
 
-ul {
+.belowForm {
+  @include outer-container();
+}
+
+.contacts {
+  @include span-columns(7);
   list-style: none;
-  width: 400px;
-  margin-left: 115px;
+
+  margin-left: -14px;
   margin-top: 40px;
+}
+
+.sidebarNames {
+  @include span-columns(5);
+  border: 2px solid $gray;
+  list-style: none;
+  margin-top: 40px;
+  border-radius: 3px;
+  width: 215px;
+  padding: 25px;
+  font-size: 18px;
+}
+
+.sidebarFullName {
+  width: 100%;
 }
 
 .tag {
@@ -75,6 +95,7 @@ ul {
       float: right;
       font-size: 17px;
       margin-top: 16px;
+      cursor: pointer;
     }
 }
 
@@ -103,8 +124,9 @@ ul {
   border: 1px solid $gray;
   border-radius: 3px;
   padding-left: 25px;
-  padding-right: 23px;
+  padding-right: 15px;
   margin-left: 30px;
+  font-size: 14px;
   position: relative;
 }
 

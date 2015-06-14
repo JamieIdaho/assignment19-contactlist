@@ -32,11 +32,43 @@ button {
   margin-top: 25px;
   outline: none; }
 
-ul {
+.belowForm {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  .belowForm::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.contacts {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 57.35098%;
   list-style: none;
-  width: 400px;
-  margin-left: 115px;
+  margin-left: -14px;
   margin-top: 40px; }
+  .contacts:last-child {
+    margin-right: 0; }
+
+.sidebarNames {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 40.29137%;
+  border: 2px solid #7F7D7B;
+  list-style: none;
+  margin-top: 40px;
+  border-radius: 3px;
+  width: 215px;
+  padding: 25px;
+  font-size: 18px; }
+  .sidebarNames:last-child {
+    margin-right: 0; }
+
+.sidebarFullName {
+  width: 100%; }
 
 .tag {
   color: #7F7D7B;
@@ -64,7 +96,8 @@ ul {
     padding: 0px 9px;
     float: right;
     font-size: 17px;
-    margin-top: 16px; }
+    margin-top: 16px;
+    cursor: pointer; }
 
 .social {
   display: -webkit-inline-box; }
@@ -88,8 +121,9 @@ ul {
   border: 1px solid #7F7D7B;
   border-radius: 3px;
   padding-left: 25px;
-  padding-right: 23px;
+  padding-right: 15px;
   margin-left: 30px;
+  font-size: 14px;
   position: relative; }
 
 .phoneNumber::before {
