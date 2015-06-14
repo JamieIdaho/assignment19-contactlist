@@ -7,7 +7,7 @@ $green: #A6E22D;
 
 .container {
   padding: 25px 200px;
-  margin: 0 auto;
+  margin: -112px auto;
   font-family: $fontStyle;
 }
 
@@ -17,6 +17,28 @@ form {
   width: 682px;
   padding: 25px;
 
+}
+
+.verticalText {
+  transform: rotate(270deg);
+  transform-origin: 1.3em 2.8em;
+  font-size: 5em;
+  margin-bottom: -62px;
+}
+
+.horizontalText {
+  font-size: 5em;
+  position: relative;
+}
+
+.horizontalText::before {
+  font-family: FontAwesome;
+  position: absolute;
+  content: "\f21b";
+  left: -64px;
+  top: 63px;
+  font-size: 50px;
+  color: $green;
 }
 
 input {
@@ -41,12 +63,19 @@ button {
   @include outer-container();
 }
 
+// .contacts li {
+//   height: 50px;
+
+// }
+
+
 .contacts {
   @include span-columns(7);
   list-style: none;
-
   margin-left: -14px;
   margin-top: 40px;
+
+
 }
 
 .sidebarNames {
@@ -76,7 +105,8 @@ button {
 
 
 .contactItem {
-  padding: 0;
+  // height: 300px;
+  overflow: hidden;
 }
 
 .contactCard {
@@ -84,7 +114,11 @@ button {
   border-radius: 3px;
   padding: 25px;
   margin-bottom: 20px;
+  // height: 400px;
+  // overflow: hidden;
 }
+
+
 
 .fullName {
   width: 100%;

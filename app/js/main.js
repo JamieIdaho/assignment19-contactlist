@@ -75,17 +75,22 @@ var contactView = function(x) {
 //displayed contact names on the sidebar
 var sidebarView = function(x) {
   var sidebarHTML = template.example(x);
-  $('#sidebarNames').prepend(sidebarHTML);
 
-  //   .sort(function(a,b) {
+  // sidebarHTML = sidebarHTML.sort(function(a,b) {
   //   if(a.lastName.toLowerCase() < b.lastName.toLowerCase()) return -1;
   //   if(a.lastName.toLowerCase() > b.lastName.toLowerCase()) return 1;
   //   return 0;
   // });
+  $('#sidebarNames').prepend(sidebarHTML);
 };
 
 //submit handler
 $('#contactForm').on('submit', addContact);
+
+// $('#contacts').on('click', 'li', function() {
+//   $('#contacts').removeClass('contactItem');
+//   $(this).addClass('contactItem');
+// });
 
 //delete handler
 $('#contacts').on('click', '#fullName #remove', removeContact);
