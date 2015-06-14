@@ -9,7 +9,12 @@ allContacts.fetch().done(function() {
   });
   allContacts.each(function(model) {
     sidebarView(model.attributes);
-  });
+  //   .sort(function(a,b) {
+  //   if(a.lastName.toLowerCase() < b.lastName.toLowerCase()) return -1;
+  //   if(a.lastName.toLowerCase() > b.lastName.toLowerCase()) return 1;
+  //   return 0;
+  // });
+ });
 });
 
 // get input values
@@ -71,6 +76,12 @@ var contactView = function(x) {
 var sidebarView = function(x) {
   var sidebarHTML = template.example(x);
   $('#sidebarNames').prepend(sidebarHTML);
+
+  //   .sort(function(a,b) {
+  //   if(a.lastName.toLowerCase() < b.lastName.toLowerCase()) return -1;
+  //   if(a.lastName.toLowerCase() > b.lastName.toLowerCase()) return 1;
+  //   return 0;
+  // });
 };
 
 //submit handler
@@ -78,6 +89,8 @@ $('#contactForm').on('submit', addContact);
 
 //delete handler
 $('#contacts').on('click', '#fullName #remove', removeContact);
+
+$('#sidebarNames').on('click', '#sidebarFullName', contactView);
 
 
 
