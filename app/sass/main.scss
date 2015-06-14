@@ -3,24 +3,42 @@
 
 $fontStyle: 'News Cycle', sans-serif;
 $gray: #7F7D7B;
+$green: #A6E22D;
 
 .container {
-  padding: 50px 200px;
+  padding: 25px 200px;
   margin: 0 auto;
   font-family: $fontStyle;
 }
 
 form {
-  border: 1px solid green;
+  border: 4px solid $green;
   border-radius: 3px;
-  width: 400px;
+  width: 682px;
   padding: 25px;
+}
+
+input {
+  width: 300px;
+  border-radius: 3px;
+  border: 1px solid $gray;
+  margin: 3px;
+}
+
+button {
+  background-color: $green;
+  color: white;
+  border-radius: 3px;
+  border: 1px solid $green;
+  width: 615px;
+  margin-top: 25px;
 }
 
 ul {
   list-style: none;
   width: 400px;
-  padding-left: 0;
+  margin-left: 115px;
+  margin-top: 40px;
 }
 
 .tag {
@@ -37,7 +55,7 @@ ul {
 }
 
 .contactCard {
-  border: 1px solid $gray;
+  border: 2px solid $gray;
   border-radius: 3px;
   padding: 25px;
   margin-bottom: 20px;
@@ -54,8 +72,8 @@ ul {
       border-radius: 3px;
       padding: 0px 9px;
       float: right;
-      font-size: 20px;
-      margin-top: 14px;
+      font-size: 17px;
+      margin-top: 16px;
     }
 }
 
@@ -66,29 +84,73 @@ ul {
 .email {
   border: 1px solid $gray;
   border-radius: 3px;
-  padding-left: 20px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.email::before {
+  position: absolute;
+  font-family: FontAwesome;
+  content: "\f003";
+  left: 5px;
+  font-size: 12px;
+  margin-top: 9px;
+  color: orange;
 }
 
 .phoneNumber {
   border: 1px solid $gray;
   border-radius: 3px;
-  padding-left: 20px;
-  padding-right: 35px;
+  padding-left: 25px;
+  padding-right: 23px;
   margin-left: 30px;
+  position: relative;
+}
+
+.phoneNumber::before {
+  position: absolute;
+  font-family: FontAwesome;
+  left: 5px;
+  margin-top: 9px;
+  font-size: 14px;
+  content: "\f095";
+  color: $green;
 }
 
 .twitter {
   border: 1px solid $gray;
   border-radius: 3px;
-  padding-left: 20px;
+  padding-left: 25px;
   padding-right: 25px;
+  position: relative;
+}
+
+.twitter::before {
+  position: absolute;
+  font-family: FontAwesome;
+  left: 5px;
+  margin-top: 9px;
+  content: "\f099";
+  color: #55ACEE;
+  font-size: 12px;
 }
 
 .linkedin {
   border: 1px solid $gray;
   border-radius: 3px;
-  padding-left: 20px;
+  padding-left: 25px;
   padding-right: 5px;
+  position: relative;
+}
+
+.linkedin::before {
+  position: absolute;
+  font-family: FontAwesome;
+  left: 5px;
+  margin-top: 9px;
+  content: "\f0e1";
+  font-size: 12px;
+  color: #0F7DB7;
 }
 
 

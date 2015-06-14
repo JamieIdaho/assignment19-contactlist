@@ -50,6 +50,7 @@ var removeContact = function(e) {
 
 
       allContacts.get(id2Delete).destroy().success(function() {
+        contact2Delete.parent().fadeOut();
         contact2Delete.fadeOut();
 
       });
