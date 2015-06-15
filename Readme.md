@@ -1,6 +1,8 @@
 ## Welcome to My Repo
 
-> I am your Readme.md file, you should probably update me.
+This is a contact list that takes the following inputs: last name, first name, email address, phone number, twitter handle and linkedin url.
+
+Made using Backbone, Handlebars, jQuery, SCSS, bourbon & neat.
 
 
 ## Usage
