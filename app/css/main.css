@@ -83,7 +83,8 @@ button {
   border-radius: 3px;
   width: 215px;
   padding: 25px;
-  font-size: 18px; }
+  font-size: 18px;
+  color: #7F7D7B; }
   .sidebarNames:last-child {
     margin-right: 0; }
 
