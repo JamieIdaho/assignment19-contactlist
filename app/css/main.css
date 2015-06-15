@@ -102,8 +102,12 @@ button {
   top: 5px;
   text-decoration: none; }
 
-.contactItem {
+.contacts li {
+  height: 50px;
   overflow: hidden; }
+
+.contacts li.contactItem {
+  height: 300px; }
 
 .contactCard {
   border: 2px solid #7F7D7B;

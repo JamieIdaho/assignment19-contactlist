@@ -50,12 +50,15 @@ var addContact = function(e) {
 var removeContact = function(e) {
   e.preventDefault();
   var contact2Delete = $(this).parent().parent(),
-      id2Delete = contact2Delete.attr('id');
+      id2Delete = contact2Delete.attr('data-id');
 
 
       allContacts.get(id2Delete).destroy().success(function() {
         contact2Delete.parent().fadeOut();
-        contact2Delete.fadeOut();
+
+        $('#sidebarNames').find('[data-id="' + id2Delete + '"]').fadeOut();
+
+        // contact2Delete.fadeOut();
 
       });
     };
@@ -64,28 +67,38 @@ var removeContact = function(e) {
 //displays contact info on the page
 var contactView = function(x) {
   var contactHTML = template.contact(x);
-  $('#contacts').prepend(contactHTML);
+  $('#contacts').append(contactHTML);
 };
 
 //displayed contact names on the sidebar
 var sidebarView = function(x) {
   var sidebarHTML = template.example(x);
-  console.log(sidebarHTML);
-  $('#sidebarNames').prepend(sidebarHTML);
+
+  $('#sidebarNames').append(sidebarHTML);
 };
 
 //submit handler
 $('#contactForm').on('submit', addContact);
 
-// $('#contacts').on('click', 'li', function() {
-//   $('#contacts').removeClass('contactItem');
-//   $(this).addClass('contactItem');
-// });
+//accordion
+$('#contacts').on('click', 'li', function() {
+  $('#contacts li').removeClass('contactItem');
+  $(this).addClass('contactItem');
+});
+
+
 
 //delete handler
 $('#contacts').on('click', '#fullName #remove', removeContact);
 
-$('#sidebarNames').on('click', '#sidebarFullName', contactView);
+$('#sidebarNames').on('click', '.sidebarFullName', function() {
+  var pizza = $(this).data('id');
+  // var foo = allContacts.get(pizza);
+  // $('#contacts').empty();
+  // contactView(foo.toJSON());
+  $('#contacts').find('[data-id="' + pizza + '"]').trigger('click');
+
+});
 
 
 

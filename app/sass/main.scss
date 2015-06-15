@@ -63,10 +63,7 @@ button {
   @include outer-container();
 }
 
-// .contacts li {
-//   height: 50px;
 
-// }
 
 
 .contacts {
@@ -109,11 +106,15 @@ button {
 
 }
 
-
-.contactItem {
-  // height: 300px;
+.contacts li {
+  height: 50px;
   overflow: hidden;
 }
+
+.contacts li.contactItem {
+  height: 300px;
+}
+
 
 .contactCard {
   border: 2px solid $gray;
