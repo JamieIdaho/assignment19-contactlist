@@ -96,6 +96,11 @@ button {
   cursor: pointer;
 }
 
+.sidebarFullName:hover {
+  color: black;
+  font-weight: bold;
+}
+
 .tag {
   color: $gray;
   font-size: 10px;
@@ -136,7 +141,13 @@ button {
       margin-top: 16px;
       cursor: pointer;
     }
+.remove:hover {
+
+  content: "delete this contact";
+  color: black;
 }
+}
+
 
 .social {
     display: -webkit-inline-box;

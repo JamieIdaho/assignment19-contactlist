@@ -8,7 +8,7 @@ this["template"]["contact"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.
     + alias3(((helper = (helper = helpers.lastName || (depth0 != null ? depth0.lastName : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"lastName","hash":{},"data":data}) : helper)))
     + ", "
     + alias3(((helper = (helper = helpers.firstName || (depth0 != null ? depth0.firstName : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"firstName","hash":{},"data":data}) : helper)))
-    + " <span id=\"remove\" class=\"remove\">X</span><div></div></div>\n\n  <div class=\"email\">"
+    + "<span id=\"remove\" class=\"remove\">X</span></div>\n\n  <div class=\"email\">"
     + alias3(((helper = (helper = helpers.email || (depth0 != null ? depth0.email : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"email","hash":{},"data":data}) : helper)))
     + " </div>\n  <div class=\"tagDiv\"><a id=\"emailTag\" href=\"#\" class=\"tag\">email</a></div>\n\n  <div class=\"linkedin\">"
     + alias3(((helper = (helper = helpers.linkedin || (depth0 != null ? depth0.linkedin : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"linkedin","hash":{},"data":data}) : helper)))

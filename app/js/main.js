@@ -9,12 +9,7 @@ allContacts.fetch().done(function() {
   });
   allContacts.each(function(model) {
     sidebarView(model.attributes);
-  //   .sort(function(a,b) {
-  //   if(a.lastName.toLowerCase() < b.lastName.toLowerCase()) return -1;
-  //   if(a.lastName.toLowerCase() > b.lastName.toLowerCase()) return 1;
-  //   return 0;
-  // });
- });
+  });
 });
 
 // get input values
@@ -75,12 +70,7 @@ var contactView = function(x) {
 //displayed contact names on the sidebar
 var sidebarView = function(x) {
   var sidebarHTML = template.example(x);
-
-  // sidebarHTML = sidebarHTML.sort(function(a,b) {
-  //   if(a.lastName.toLowerCase() < b.lastName.toLowerCase()) return -1;
-  //   if(a.lastName.toLowerCase() > b.lastName.toLowerCase()) return 1;
-  //   return 0;
-  // });
+  console.log(sidebarHTML);
   $('#sidebarNames').prepend(sidebarHTML);
 };
 
